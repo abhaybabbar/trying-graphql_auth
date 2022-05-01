@@ -1,7 +1,10 @@
 import graphene
-from users.schema import Query as UserQuery
+from users.schema import Query as UserQuery, Mutation as UserMutation
 
 class Query(UserQuery):
     pass
 
-schema = graphene.Schema(query=Query)
+class Mutation(UserMutation):
+    pass
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
